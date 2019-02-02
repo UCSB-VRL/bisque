@@ -1,0 +1,14 @@
+.hg/*
+bqenv/*
+*~
+*.pyc
+public/*
+data/*
+*.egg-info
+*.log
+external/*
+config/*
+debian/*
+logs/*
+tools/*
+docs/*
