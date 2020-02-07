@@ -168,7 +168,7 @@ def matlab_setup(main_path, files=[], bisque_deps=False,
             os.unlink(ctf)
         shutil.copyfile(os.path.join(dependency_dir, ctf), ctf)
         shutil.rmtree(dependency_dir)
-        # os.chmod(main, 0744)
+        os.chmod(main, 0744)
         return 0
     return 1
 
@@ -217,7 +217,7 @@ def python_setup(scripts, package_scripts=True,
             template = Template(filename=filename)
             with open(script_name, 'wb') as f:
                 f.write(template.render(script=data['script']))
-                # os.chmod(script_name, 0744)
+                os.chmod(script_name, 0744)
                 return 0
         except Exception as e:
             print("Could not create python launcher script %s" % e)
